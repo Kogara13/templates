@@ -21,8 +21,8 @@
 		path = ./shell;
 		description = "Default template";
 	    };
-	    webdev = {
-		path = ./webdev;
+	    react = {
+		path = ./react;
 		description = "Web development template";
 	    };
 	};
