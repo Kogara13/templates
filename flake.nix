@@ -1,7 +1,7 @@
 {
     description = "Collection of custom project templates";
 
-    outputs = { self }: {
+    outputs = { self, ... }: {
 	templates = {
 	    golang = {
 		path = ./golang;
@@ -25,7 +25,6 @@
 		path = ./webdev;
 		description = "Web development template";
 	    };
-	    defaultTemplate = self.tempates.shell;
 	};
     };
 }
