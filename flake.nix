@@ -3,18 +3,23 @@
 
     outputs = { self }: {
 	templates = {
-	    local = {
-		path = ./local;
-		description = "Use local package default.nix";
+	    golang = {
+		path = ./golang;
+		description = "Create a generic golang development environment";
 	    };
 	    rust = {
 		path = ./rust;
 		description = "Create a generic rust development environment";
 	    };
 
+	    python = {
+		path = ./python;
+		description = "Create a generic python development environment";
+	    };
+	    
 	    shell = {
 		path = ./shell;
-		description = "Use packages available in nixpkgs";
+		description = "Default template";
 	    };
 	    defaultTemplate = self.tempates.shell;
 	};
