@@ -21,8 +21,8 @@
 		path = ./shell;
 		description = "Default template";
 	    };
-	    web = {
-		path = ./web;
+	    webdev = {
+		path = ./webdev;
 		description = "Web development template";
 	    };
 	    defaultTemplate = self.tempates.shell;
