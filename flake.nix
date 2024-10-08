@@ -21,6 +21,10 @@
 		path = ./shell;
 		description = "Default template";
 	    };
+	    R = {
+		path = ./R;
+		description = "R language template";
+	    };
 	    react = {
 		path = ./react;
 		description = "Web development template";
