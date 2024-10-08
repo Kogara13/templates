@@ -22,7 +22,15 @@
             ];
           };
 	  packages = [
-	    (pkgs.python3.withPackages (python-pkgs: [
+	    (pkgs.python311.withPackages (ps: with ps; [
+		numpy
+		scipy
+		pandas
+		jupyterlab
+		statsmodels
+		scikitlearn
+		matplotlib
+		opencv
 		# put python packages here
 		# Example: python-pkgs.pandas
 	    ]))
