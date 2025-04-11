@@ -12,20 +12,39 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      RStudio-with-my-packages = pkgs.rstudioWrapper.override{
+        packages = with pkgs.rPackages; [ 
+        amap
+        dplyr 
+        ggplot2 
+        ggcorrplot
+        hash 
+        tidyverse 
+        fastDummies 
+        corrplot
+        devtools 
+        forecast 
+        mlbench
+        treemapify
+        Hmisc
+        corrgram
+        gains
+        ROC
+        caret
+      ]; 
+        };
     in
     {
       devShells.x86_64-linux.default =
         pkgs.mkShell
           {
             nativeBuildInputs = with pkgs; [
-		R
+		            R
+                RStudio-with-my-packages
             ];
           };
 	  packages = [
-	    (pkgs.python3.withPackages (python-pkgs: [
-		# put python packages here
-		# Example: python-pkgs.pandas
-	    ]))
+        # Put other packages here
 	  ];
     };
 }
